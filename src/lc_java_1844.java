@@ -8,7 +8,7 @@ public class lc_java_1844 {
     }
 
     public static String replaceDigits(String s) {
-        String rtnString = "";
+        StringBuilder rtnString = new StringBuilder();
         int charNum = 0;
         //文字列をchar型の配列に転換する
         char[] charStr = s.toCharArray();
@@ -20,10 +20,12 @@ public class lc_java_1844 {
             }
             //奇数の場合
             else {
-                charNum += (int) charStr[i];
+                //char型の数字は数字タイプに転換する方法はどちらいいですか。
+//               charNum += (int) charStr[i] - 48;
+                charNum += Integer.parseInt(String.valueOf(charStr[i]));
             }
-            rtnString += (char)charNum;
+            rtnString.append((char) charNum);
         }
-        return rtnString;
+        return rtnString.toString();
     }
 }
