@@ -17,6 +17,7 @@ public class lc_java_1108 {
             if (spos > 0 && i != spos) {
                 newAddr.append(address, i, spos).append("[.]");
                 i = spos;
+            //「.」は存在しない場合１回のみ「else if」の部分を行う
             } else if (spos < 0) {
                 newAddr.append(address.substring(i));
                 break;
