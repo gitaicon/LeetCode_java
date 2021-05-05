@@ -9,11 +9,11 @@ public class lc_java_1431 {
         int[] candies = {2, 3, 5, 1, 3};
         int extraCandies = 3;
         System.out.println(kidsWithCandies(candies, extraCandies));
-        //テストケース１を定義する
-        candies = new int[]{4,2,1,1,2};
+        //テストケース２を定義する
+        candies = new int[]{4, 2, 1, 1, 2};
         extraCandies = 1;
         System.out.println(kidsWithCandies(candies, extraCandies));
-        //テストケース１を定義する
+        //テストケース３を定義する
         candies = new int[]{12,1,12};
         extraCandies = 10;
         System.out.println(kidsWithCandies(candies, extraCandies));
@@ -24,7 +24,7 @@ public class lc_java_1431 {
         List<Boolean> results = new ArrayList<>();
         //配列candiesの最大値を取得する
         OptionalInt maxNum = Arrays.stream(candies).max();
-        //
+        //戻り値を設定する
         for (int eachCandies : candies) {
             int sumNum = eachCandies + extraCandies;
             if (sumNum >= maxNum.getAsInt()) {
@@ -33,8 +33,6 @@ public class lc_java_1431 {
                 results.add(false);
             }
         }
-
-
         return results;
     }
 }
